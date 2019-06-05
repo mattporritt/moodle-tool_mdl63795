@@ -18,7 +18,6 @@
  * Plugin administration pages are defined here.
  *
  * @package     tool_mdl63795
- * @category    admin
  * @copyright   2019 Matt Porritt <mattp@catalyst-au.net>
  * @license     http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
