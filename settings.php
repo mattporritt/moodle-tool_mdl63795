@@ -26,6 +26,29 @@
 defined('MOODLE_INTERNAL') || die();
 
 if ($ADMIN->fulltree) {
-   // TODO: Define the plugin settings page.
-   // https://docs.moodle.org/dev/Admin_settings
+    $settings = new admin_settingpage('tool_mdl63795', new lang_string('pluginname', 'tool_mdl63795'));
+
+
+    // Initial default setting.
+    $settings->add(new admin_setting_configtext(
+            'tool_mdl63795/initial',
+            get_string('initial', 'tool_mdl63795'),
+            get_string('initial', 'tool_mdl63795'),
+            'A nice default',
+            PARAM_RAW
+            ));
+
+    // Setting that is available after the above is set.
+    $initaldefault = get_config('tool_mdl63795', 'initial');
+    if ($initaldefault) {
+        $settings->add(new admin_setting_configtext(
+                'tool_mdl63795/secondary',
+                get_string('secondary', 'tool_mdl63795'),
+                get_string('secondary_desc', 'tool_mdl63795'),
+                'A secondary value',
+                PARAM_RAW
+                ));
+    }
+
+    $ADMIN->add('tools', $settings);
 }

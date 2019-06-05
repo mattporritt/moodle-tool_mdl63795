@@ -26,3 +26,8 @@
 defined('MOODLE_INTERNAL') || die();
 
 $string['pluginname'] = 'MDL63795 Tester';
+
+$string['initial'] = 'Initial setting';
+$string['initial_desc'] = 'The initial default setting for the test plugin';
+$string['secondary'] = 'Secondary setting';
+$string['secondary_desc'] = 'The secondary default setting for the test plugin';
